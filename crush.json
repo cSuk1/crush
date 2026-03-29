@@ -1,5 +1,72 @@
 {
   "$schema": "https://charm.land/crush.json",
+  "models": {
+    "large": {
+      "model": "qwen3.5:9b",
+      "provider": "ollama"
+    },
+    "small": {
+      "model": "qwen3.5:4b-q4_K_M",
+      "provider": "ollama"
+    }
+  },
+  "providers": {
+    "ollama": {
+      "name": "Ollama",
+      "base_url": "http://localhost:11434/v1/",
+      "type": "openai-compat",
+      "models": [
+        {
+          "name": "GLM-4.7 Flash",
+          "id": "glm-4.7-flash:q4_K_M",
+          "context_window": 200000,
+          "default_max_tokens": 8000
+        },
+        {
+          "name": "Qwen 3 Coder 30B",
+          "id": "qwen3-coder:30b-a3b-q4_K_M",
+          "context_window": 256000,
+          "default_max_tokens": 20000
+        },
+        {
+          "name": "Qwen 3 4B Thinking",
+          "id": "qwen3:4b-thinking-2507-q4_K_M",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "Qwen 3 4B Instruct",
+          "id": "qwen3:4b-instruct-2507-q4_K_M",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "Qwen 3 VL 8B",
+          "id": "qwen3-vl:8b-thinking-q4_K_M",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "Qwen 3.5 4B",
+          "id": "qwen3.5:4b-q4_K_M",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "Qwen 3.5 35B",
+          "id": "qwen3.5:35b-a3b-q4_K_M",
+          "context_window": 256000,
+          "default_max_tokens": 20000
+        },
+        {
+          "name": "Qwen 3.5 9B",
+          "id": "qwen3.5:9b",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        }
+      ]
+    }
+  },
   "lsp": {
     "gopls": {
       "options": {
