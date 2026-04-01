@@ -2,12 +2,12 @@
   "$schema": "https://charm.land/crush.json",
   "models": {
     "large": {
-      "model": "qwen3.5:9b",
-      "provider": "ollama"
+      "model": "glm-5",
+      "provider": "tx_token_plan"
     },
     "small": {
-      "model": "qwen3.5:4b-q4_K_M",
-      "provider": "ollama"
+      "model": "minimax-m2.5",
+      "provider": "tx_token_plan"
     }
   },
   "providers": {
@@ -61,6 +61,56 @@
         {
           "name": "Qwen 3.5 9B",
           "id": "qwen3.5:9b",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        }
+      ]
+    },
+    "tx_token_plan": {
+      "name": "Tencent",
+      "base_url": "https://api.lkeap.cloud.tencent.com/plan/v3",
+      "type": "openai-compat",
+      "api_key": "${TX_TOKEN_PLAN_API_KEY}",
+      "models": [
+        {
+          "name": "TxMiniMax-M2.5",
+          "id": "minimax-m2.5",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "TxKimi-K2.5",
+          "id": "kimi-k2.5",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "TxGLM-5",
+          "id": "glm-5",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "hunyuan-turbos",
+          "id": "hunyuan-turbos",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "Tencent HY 2.0 Think",
+          "id": "hunyuan-2.0-thinking",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "Tencent HY 2.0 Instruct",
+          "id": "hunyuan-2.0-instruct",
+          "context_window": 128000,
+          "default_max_tokens": 10000
+        },
+        {
+          "name": "HY T1",
+          "id": "hunyuan-t1",
           "context_window": 128000,
           "default_max_tokens": 10000
         }
