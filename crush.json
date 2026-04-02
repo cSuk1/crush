@@ -23,28 +23,10 @@
           "default_max_tokens": 8000
         },
         {
-          "name": "Qwen 3 Coder 30B",
-          "id": "qwen3-coder:30b-a3b-q4_K_M",
+          "name": "qwen3.5:35b Coding",
+          "id": "qwen3.5:35b-a3b-coding-nvfp4",
           "context_window": 256000,
           "default_max_tokens": 20000
-        },
-        {
-          "name": "Qwen 3 4B Thinking",
-          "id": "qwen3:4b-thinking-2507-q4_K_M",
-          "context_window": 128000,
-          "default_max_tokens": 10000
-        },
-        {
-          "name": "Qwen 3 4B Instruct",
-          "id": "qwen3:4b-instruct-2507-q4_K_M",
-          "context_window": 128000,
-          "default_max_tokens": 10000
-        },
-        {
-          "name": "Qwen 3 VL 8B",
-          "id": "qwen3-vl:8b-thinking-q4_K_M",
-          "context_window": 128000,
-          "default_max_tokens": 10000
         },
         {
           "name": "Qwen 3.5 4B",
